@@ -35,6 +35,7 @@ jobs:
         with:
           image: "bensteinberg/actions-test"
           rebuild-if-changed: "Dockerfile"
+          registry: "ghcr.io"
           registry-user: ${{ secrets.REPOSITORY_USER }}
           registry-pass: ${{ secrets.REPOSITORY_TOKEN }}
 
