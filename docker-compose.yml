@@ -1,0 +1,11 @@
+version: '2.2'
+services:
+    redis:
+        image: redis:6.0.11
+    web:
+        image: bensteinberg/actions-test:0.5-916c93cb301006ccc2b1510ddd90116d
+        volumes:
+            - .:/app
+        depends_on:
+            - redis
+        tty: true
