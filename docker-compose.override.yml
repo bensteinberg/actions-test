@@ -2,11 +2,11 @@ services:
   web:
     build:
       context: .
-    x-bake:
-      tags:
-        - registry.lil.tools/harvardlil/actions-test:0-init
-      platforms:
-        - linux/amd64
-        - linux/arm64
-    x-hash-paths:
-      - foo.txt
+      x-bake:
+        tags:
+          - registry.lil.tools/harvardlil/actions-test:0-init
+        platforms:
+          - linux/amd64
+          - linux/arm64
+      x-hash-paths:
+        - foo.txt
