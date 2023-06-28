@@ -3,4 +3,4 @@ services:
     image: registry.lil.tools/harvardlil/actions-test:2-dce2ea7cf75d6f766fefe531eb1e79ca
     volumes:
       - .:/app
-    tty: true  # test whether "docker manifest inspect" is failing
+    tty: true  # test whether "docker manifest inspect" is failing again
