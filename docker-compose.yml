@@ -4,4 +4,3 @@ services:
         volumes:
             - .:/app
         tty: true
-        build: .
