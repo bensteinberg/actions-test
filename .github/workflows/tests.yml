@@ -16,7 +16,9 @@ jobs:
         uses: harvard-lil/docker-compose-update-action@main
 
       - name: docker compose up
+        shell: 'script -q -e -c "bash --noprofile --norc -eo pipefail {0}"'  # avoid docker-compose "the input device is not a TTY" -- see https://github.com/actions/runner/issues/241#issuecomment-842566950
         run: |
+          # separate pull so downloads run in parallel, with
           # --ignore-pull-failures for PRs with new images
           # that haven't been pushed yet:
           docker compose -f docker-compose.yml pull --ignore-pull-failures || true
