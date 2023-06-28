@@ -1,6 +1,6 @@
 services:
     web:
-        image: registry.lil.tools/harvardlil/actions-test:0-init
+        image: registry.lil.tools/harvardlil/actions-test:1-74d2da587dd751ab83a51b7b198666c4
         volumes:
             - .:/app
         tty: true
