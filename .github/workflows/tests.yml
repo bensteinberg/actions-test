@@ -16,10 +16,10 @@ jobs:
         uses: harvard-lil/docker-compose-update-action@main
 
       - name: docker compose up
-        run:
+        run: |
           # --ignore-pull-failures for PRs with new images
           # that haven't been pushed yet:
-          docker-compose -f docker-compose.yml pull --ignore-pull-failures || true
+          docker compose -f docker-compose.yml pull --ignore-pull-failures || true
           docker compose -f docker-compose.yml up -d
 
       - name: Show running containers
